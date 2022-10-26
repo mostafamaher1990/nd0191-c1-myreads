@@ -2,11 +2,11 @@ import React from "react";
 import BookShelf from "./BookShelf";
 
 
+
 function MainShelf({ books, updateShelf, book,search, bookFound }) {
-  
   const currentlyReading = books.filter(
     (book) => book.shelf === "currentlyReading"
-  );
+  );  
 
   const wantToRead = books.filter((book) => book.shelf === "wantToRead");
 

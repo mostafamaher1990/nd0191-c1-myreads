@@ -10,7 +10,7 @@ function Book({ book, updateShelf }) {
           style={{
             width: 128,
             height: 193,
-            backgroundImage: `url(${book.imageLinks.thumbnail})`,
+            backgroundImage: `url(${book.imageLinks?.thumbnail})`,
           }}
         ></div>
         <div className="book-shelf-changer">
@@ -32,8 +32,9 @@ function Book({ book, updateShelf }) {
       </div>
       <div className="book-title">{book.title}</div>
       <div className="book-authors">{book.authors}</div>
+      <div className="book-authors">{book.shelf ? book.shelf : "none"}</div>
     </div>
   );
 }
 
-export default Book;
+export default React.memo(Book);
